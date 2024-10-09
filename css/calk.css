@@ -1,0 +1,211 @@
+body {
+	background-color:#C9E4F1;
+	margin:0;
+}
+#calcolatrice {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:50%;
+	width:13em;
+	margin: 0.1em -6.5em;
+	border:ridge 2px #7FCFFF;
+}
+#intestazione {
+	position:absolute;
+	top:0;
+	left:20px;
+	height:2em;
+	text-align:center;
+}
+#help_calk {
+	position:absolute;
+	top:1px;
+	right:0;
+	cursor:pointer;
+}
+#testoHelp {
+	font-family: sans-serif,cursive;
+	font-size: 0.8em;
+	text-align: justify;
+}
+#menu {
+	position:absolute;
+	top:2em;
+	left:5px;
+	width:12.4em;
+	height:0.8em;
+	overflow:hidden;
+}
+#menu a {
+	float:left;
+	height:1.2em;
+	width:24%;
+	margin:0;
+	padding:0;
+	text-align:center;
+	text-decoration:none;
+	background-color:#B3DEEF; color:#4682B4;
+	font-size:0.6em;
+	font-family:tahoma, arial;
+	border:inset 1px;
+}
+#menu a:hover {
+	background-color:transparent;
+	border:1px solid transparent;
+}
+#nastro {
+	position:absolute;
+	background-color:#7FCFFF;
+	border:inset 2px #4099CF;
+	margin: 8px;
+	width:93%;
+	height:auto;
+	top:3.1em;
+	bottom:4em;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	text-align:right;
+	font-family:monospace;
+	//font-size:1.05em;
+}
+#risultato {
+	position:absolute;
+	bottom:2em;
+	left:0.3em;
+	height:1.5em;
+	width:12.5em;
+	background-image:url("../images/risultato.jpg")
+}
+.risultato {
+	background-color:transparent;
+	border:0px;
+	text-align:right;
+	font-family:monospace;
+	font-size:1.1em;
+	font-weight:bold;
+	margin: 0.2em 0 0 -2.5em;
+	font-weight:bold;
+	width:100%;
+}
+.contatore {
+	position:absolute;
+	top:0.2em;
+	right:0.3em;
+	width:2em;
+	height:1.5em;
+	padding:0;
+	font-family:arial, tahoma;
+	font-size:0.7em;
+	border:1px inset;
+	background-color:#B3DEEF; color:#4682B4;
+	text-align:center;
+}
+.stileris{
+	text-decoration:overline;
+}
+.stilenota{
+	float:left;
+}
+#calce{
+	position:absolute;
+	bottom:0;
+       	height:2em;
+	width:100%;
+}
+.numero {
+	text-align:right;
+	margin: 0 0 0 4px;
+	font-family:monospace;
+	font-size:1.05em;
+}
+.canc {
+	background-color:#4682B4;
+	color:#F5DEB3;
+	font-family:verdana, arial, tahoma;
+	font-weight:bolder;
+	font-size:0.6em;
+	width:2em;
+}
+#tastierino {
+	position:absolute;
+	border-collapse:collapse;
+	bottom:0.4em;
+	left:50%;
+	margin-left:-6.1em;
+}
+#tastierino.normal tr {
+	height:20%;
+}
+#tastierino.normal tr#espress {
+	display:none;
+}
+#tastierino.espress tr {
+	height:16%;
+}
+#tastierino.espress tr#espress {
+	display:table-row;
+}
+#tastierino input {
+	width:100%;
+	height:100%;
+	text-align:center;
+	font-size:1.2em;
+	background-image: -webkit-linear-gradient(top, #fcfcfc, #dceaf2);
+	background-image: -moz-linear-gradient(top, #fcfcfc, #dceaf2);
+	background-image: -ms-linear-gradient(top, #fcfcfc, #dceaf2);
+	background-image: -o-linear-gradient(top, #fcfcfc, #dceaf2);
+	background-image: linear-gradient(to bottom, #fcfcfc, #dceaf2);
+	-webkit-border-radius:7;
+	-moz-border-radius:7;
+	border-radius:7px;
+	font-family:Arial;
+	padding:0 0.6em;
+	border: solid #1f628d 1px;
+}
+#tastierino #back {
+  background: #edb4c1;
+  background-image: -webkit-linear-gradient(top, #edb4c1, #e32020);
+  background-image: -moz-linear-gradient(top, #edb4c1, #e32020);
+  background-image: -ms-linear-gradient(top, #edb4c1, #e32020);
+  background-image: -o-linear-gradient(top, #edb4c1, #e32020);
+  background-image: linear-gradient(to bottom, #edb4c1, #e32020);
+  color: #ffffff;
+}
+#tastierino #canc {
+  background: #f77183;
+  background-image: -webkit-linear-gradient(top, #f77183, #c20000);
+  background-image: -moz-linear-gradient(top, #f77183, #c20000);
+  background-image: -ms-linear-gradient(top, #f77183, #c20000);
+  background-image: -o-linear-gradient(top, #f77183, #c20000);
+  background-image: linear-gradient(to bottom, #f77183, #c20000);
+  color: #ffffff;
+}
+#tastierino #piu, #tastierino #meno,
+#tastierino #per, #tastierino #diviso {
+  background-image: -webkit-linear-gradient(top, #f7f7f7, #99d2eb);
+  background-image: -moz-linear-gradient(top, #f7f7f7, #99d2eb);
+  background-image: -ms-linear-gradient(top, #f7f7f7, #99d2eb);
+  background-image: -o-linear-gradient(top, #f7f7f7, #99d2eb);
+  background-image: linear-gradient(to bottom, #f7f7f7, #99d2eb);
+}
+#tastierino #piumeno,#tastierino #par_a,
+#tastierino #par_c,#tastierino #elev,#tastierino #resto {
+  background: #f8fadc;
+  background-image: -webkit-linear-gradient(top, #f8fadc, #f2ee1f);
+  background-image: -moz-linear-gradient(top, #f8fadc, #f2ee1f);
+  background-image: -ms-linear-gradient(top, #f8fadc, #f2ee1f);
+  background-image: -o-linear-gradient(top, #f8fadc, #f2ee1f);
+  background-image: linear-gradient(to bottom, #f8fadc, #f2ee1f);
+}
+#tastierino #resto {
+	padding:0;
+}
+#tastierino #enter {
+  background: #fcfcfc;
+  background-image: -webkit-linear-gradient(top, #fcfcfc, #bce8ba);
+  background-image: -moz-linear-gradient(top, #fcfcfc, #bce8ba);
+  background-image: -ms-linear-gradient(top, #fcfcfc, #bce8ba);
+  background-image: -o-linear-gradient(top, #fcfcfc, #bce8ba);
+  background-image: linear-gradient(to bottom, #fcfcfc, #bce8ba);
+}

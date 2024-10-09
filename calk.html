@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Calk:magin - Calcolatrice a nastro by Imaginweb</title>
+  <meta name="Generator" content="Vim 7.4 (Vi IMproved editor; http://www.vim.org/)">
+  <meta name="Author" content="Giuseppe Guida - imaginweb">
+  <meta name="Copyright" content="Copyright (C) settembre, 2007-2017 ">
+  <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+  <link rev="made" href="mailto:info@imaginweb.it">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="css/calk.css">
+ </head>
+ <body onload="document.forms['campo'].numero.focus()" onmouseover="document.forms['campo'].numero.focus()">
+	 <div id="calcolatrice">
+		 <img id="help_calk" src="images/calkmagin_help.png" alt="help" onclick="helpp();">
+		 <div id="intestazione">
+			 <img src="images/logo.png" alt="logo"><img src="images/stemmaImagin.gif" alt="Imaginweb">
+		 </div>
+		 <div id="menu">
+			<a href="" id="menu1" onclick="menu(this.id);return false;" style="border: 1px solid transparent; background-color: transparent;">normale</a>
+			<a href="" id="menu2" onclick="menu(this.id);return false;">scientifica</a>
+			<a href="" id="menu3" onclick="menu(this.id);return false;">espress</a>
+			<a href="" id="menu4" onclick="menu(this.id);return false;">listato</a>
+		 </div>
+		 <div id="nastro" oncontextmenu="savetextasfile();">---------------------<br>
+		 </div>
+		 <div id="risultato">
+			 <form name="calcolatrice">
+				 <input type="hidden" name="operatore" value="">
+				 <input type="hidden" name="precedente" value="0">
+				 <input type="hidden" name="tipocalc" value="menu1">
+				 <input type="text" name="risultato" value="" class="risultato" onfocus="document.forms['campo'].numero.focus()">
+				 <input type="text" name="conta" size="3" value="[00]" class="contatore">
+			 </form>
+		 </div>
+		 <div id="calce">
+			 <form name="campo" onsubmit="return false">
+				 <input type="text" name="numero" class="numero" value="" size="20" onkeypress="return verifica_num(event,this.value)" onmouseover="this.title=migliaia(this.value)">
+				 <input type="button" name="canc" value="c" onclick="an()" title="cancella il nastro" class="canc">
+			 </form>
+			 <textarea id="listato" name="listato" style="display:none;"></textarea>
+		 </div>
+		<table id="tastierino" border=1 style="display:none;">
+			<tr id="espress">
+				<td><input id="par_a" type="button" value="(" onClick="aggiungi('(')"></td>
+				<td><input id="par_c" type="button" value=")" onClick="aggiungi(')')"></td>
+				<td><input id="elev" type="button" value="^" onClick="aggiungi('^')"></td>
+				<td><input id="resto" type="button" value="%" onClick="aggiungi('%')"></td>
+			</tr>
+			<tr>
+				<td><input id="canc" type="button" value="C" onclick="an()"></td>
+				<td><input id="back" type="button" value="&laquo;" onClick="rm()"></td>
+				<td><input id="piumeno" type="button" value="&plusmn;" onClick="aggiungi('i')"></td>
+				<td><input id="diviso" type="button" value="/" onClick="aggiungi('/')"></td>
+			</tr>
+			<tr>
+				<td><input id="tast7" type="button" value="7" onClick="aggiungi('7')"></td>
+				<td><input id="tast8" type="button" value="8" onClick="aggiungi('8')"></td>
+				<td><input id="tast9" type="button" value="9" onClick="aggiungi('9')"></td>
+				<td><input id="per" type="button" value="*" onClick="aggiungi('*')"></td>
+			</tr>
+			<tr>
+				<td><input id="tast4" type="button" value="4" onClick="aggiungi('4')"></td> 
+				<td><input id="tast5" type="button" value="5" onClick="aggiungi('5')"></td> 
+				<td><input id="tast6" type="button" value="6" onClick="aggiungi('6')"></td>
+				<td><input id="meno" type="button" value="&ndash;" onClick="aggiungi('-')"></td>
+			</tr>
+			<tr>  
+				<td><input id="tast1" type="button" value="1" onClick="aggiungi('1')"></td>
+				<td><input id="tast2" type="button" value="2" onClick="aggiungi('2')"></td> 
+				<td><input id="tast3" type="button" value="3" onClick="aggiungi('3')"></td>
+				<td><input id="piu" type="button" value="+" onClick="aggiungi('+')"></td>
+			</tr>
+			<tr> 
+				<td><input id="tast0" type="button" value="0" onClick="aggiungi('0')"></td>
+				<td><input id="point" type="button" value="." onClick="aggiungi('.')"></td>
+				<td colspan="2"><input id="enter" type="button" value="=" onClick="aggiungi('=')"></td>
+			</tr>
+			</table> 
+	 </div>
+ </body>
+  <script>
+	if( /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()) ) {
+		document.write('<script type="text/javascript" src="script/m.calk.js"><\/script>');
+	} else {
+		document.write('<script type="text/javascript" src="script/calk.js"><\/script>');
+	};
+  </script>
+  <script> menu("menu1"); </script>
+</html>
